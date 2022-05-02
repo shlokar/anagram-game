@@ -47,10 +47,10 @@
 
 .hexagon {
   fill: white;
-  stroke: url(#gradient);
+  /* stroke: url(#gradient); */
+  stroke: black;
   stroke-width: 6;
   stroke-opacity: 0.7;
-  /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
 }
 
 .letter {
@@ -58,9 +58,6 @@
   font-weight: 700;
   font-size: 1.875em;
   text-transform: uppercase;
-
-  /* fill: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); */
-  /* fill: blue; */
 }
 
 .questionMark {
@@ -68,5 +65,6 @@
   font-weight: 700;
   font-size: 1.875em;
   text-transform: uppercase;
-  fill: url(#gradient);
+  /* fill: url(#gradient); */
+  fill: black;
 }
