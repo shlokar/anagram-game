@@ -13,6 +13,7 @@ export default function Single_Player() {
   const [word, setWord] = useState('');
   const [anagram, setAnagram] = useState('');
   const [isCorrect, setIsCorrect] = useState('');
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     getWord().then((res) => {
@@ -23,6 +24,17 @@ export default function Single_Player() {
     // time.setSeconds(time.getSeconds() + 600);
   }, []);
 
+  useEffect(() => {
+    if (isCorrect) {
+      setScore(score + 1);
+      getWord().then((res) => {
+        setWord(res.data.word);
+        setAnagram(shuffleWord(res.data.word));
+      })
+    }
+    setIsCorrect('');
+  }, [isCorrect]);
+
   const time = new Date();
   time.setSeconds(time.getSeconds() + 60);
 
@@ -31,7 +43,7 @@ export default function Single_Player() {
       <Head></Head>
       <div className={styles.container}>
         <div className={styles.score}>
-          <Score/>
+          <Score score={score}/>
         </div>
         <div className={styles.timer}>
           <Timer expiryTimestamp={time}/>
