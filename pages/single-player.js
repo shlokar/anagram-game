@@ -12,6 +12,7 @@ export default function Single_Player() {
 
   const [word, setWord] = useState('');
   const [anagram, setAnagram] = useState('');
+  const [isCorrect, setIsCorrect] = useState('');
 
   useEffect(() => {
     getWord().then((res) => {
@@ -39,7 +40,7 @@ export default function Single_Player() {
           <Hive anagram={anagram}/>
         </div>
         <div className={styles.input}>
-          <Input/>
+          <Input word={word} setIsCorrect={setIsCorrect}/>
         </div>
       </div>
     </>
