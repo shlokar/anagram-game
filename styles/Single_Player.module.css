@@ -13,4 +13,15 @@
 
 .input {
   grid-area: input;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.score {
+  grid-area: score;
+}
+
+.timer {
+  grid-area: timer;
 }

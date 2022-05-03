@@ -47,8 +47,8 @@
 
 .hexagon {
   fill: white;
-  /* stroke: url(#gradient); */
-  stroke: black;
+  stroke: url(#gradient);
+  /* stroke: black; */
   stroke-width: 6;
   stroke-opacity: 0.7;
 }
@@ -58,6 +58,8 @@
   font-weight: 700;
   font-size: 1.875em;
   text-transform: uppercase;
+  fill-opacity: 0.75;
+  /* text-color: rgba(0, 0, 0, 0.435); */
 }
 
 .questionMark {
@@ -65,6 +67,6 @@
   font-weight: 700;
   font-size: 1.875em;
   text-transform: uppercase;
-  /* fill: url(#gradient); */
-  fill: black;
+  fill: url(#gradient);
+  /* fill: black; */
 }
