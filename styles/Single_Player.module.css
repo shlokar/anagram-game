@@ -1,0 +1,16 @@
+.container {
+  width: 800px;
+  height: 600px;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-areas: "score . timer" ". hive ." ". input ."
+}
+
+.hive {
+  grid-area: hive;
+}
+
+.input {
+  grid-area: input;
+}

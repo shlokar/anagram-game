@@ -1,8 +1,8 @@
-import styles from '../styles/Anagram.module.css';
+import styles from '../styles/Hive.module.css';
 
-const Anagram = ({ anagram }) => {
+const Hive = ({ anagram }) => {
   return (
-    <div className={styles.container}>
+    // <div className={styles.container}>
       <div className={styles.hive}>
         <svg>
           <linearGradient id="gradient" x2="1" y2="1">
@@ -50,11 +50,11 @@ const Anagram = ({ anagram }) => {
         </svg>
 
       </div>
-    </div>
+    // </div>
   )
 }
 
-export default Anagram;
+export default Hive;
 
 //stroke="white" strokeWidth="7.5"
 // points="0,51.96152422706631 30,0 90,0 120,51.96152422706631 90,103.92304845413263 30,103.92304845413263"

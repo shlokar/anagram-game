@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Anagram from '../components/Anagram.js';
+import Hive from '../components/Hive.js';
+import Input from '../components/Input.js';
 import { getWord, shuffleWord } from '../components/Helpers.js';
+import styles from '../styles/Single_Player.module.css';
+
 
 export default function Single_Player() {
 
@@ -18,7 +21,14 @@ export default function Single_Player() {
   return (
     <>
       <Head></Head>
-      <Anagram anagram={anagram}/>
+      <div className={styles.container}>
+        <div className={styles.hive}>
+          <Hive anagram={anagram}/>
+        </div>
+        <div className={styles.input}>
+          <Input/>
+        </div>
+      </div>
     </>
   )
 }
