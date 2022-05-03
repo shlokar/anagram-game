@@ -13,6 +13,7 @@ export default function Single_Player() {
   const [word, setWord] = useState('');
   const [anagram, setAnagram] = useState('');
   const [isCorrect, setIsCorrect] = useState('');
+  // const [message, setMessage] = useState('');
   const [score, setScore] = useState(0);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function Single_Player() {
         setAnagram(shuffleWord(res.data.word));
       })
     }
-    setIsCorrect('');
+    setTimeout(() => setIsCorrect(''), 2000);
   }, [isCorrect]);
 
   const time = new Date();
@@ -52,7 +53,7 @@ export default function Single_Player() {
           <Hive anagram={anagram}/>
         </div>
         <div className={styles.input}>
-          <Input word={word} setIsCorrect={setIsCorrect}/>
+          <Input word={word} setIsCorrect={setIsCorrect} isCorrect={isCorrect}/>
         </div>
       </div>
     </>
