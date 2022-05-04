@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTimer } from 'react-timer-hook';
+import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 
 const Timer = ({ expiryTimestamp }) => {
 
@@ -21,9 +22,10 @@ const Timer = ({ expiryTimestamp }) => {
   } = useTimer({ expiryTimestamp, onExpire: () => console.log('timeout!') })
 
   return(
-    <div>
-      <span>{minutes}</span>:<span>{seconds}</span>
-    </div>
+    <>
+      <AccessAlarmIcon />
+      <span>{minutes}</span>:{seconds < 10 ? <span>0</span> : null}<span>{seconds}</span>
+    </>
   )
 
 }
