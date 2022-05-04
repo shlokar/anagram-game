@@ -20,29 +20,33 @@
   height: 140px;
   padding: 25px;
 }
-
-.one {
+/*
+.0 {
   transform: translate(-75%, -50%);
 }
 
-.two {
+.1 {
   transform: translate(0, -100%);
 }
 
-.three {
+.2 {
   transform: translate(75%, -50%);
 }
 
-.four {
+.3 {
   transform: translate(75%, 50%);
 }
 
-.five {
+.4 {
   transform: translate(0, 100%);
 }
 
-.six {
+.5 {
   transform: translate(-75%, 50%);
+} */
+
+.in {
+  transform: translate(0, 0);
 }
 
 .hexagon {

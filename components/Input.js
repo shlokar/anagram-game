@@ -29,7 +29,7 @@ const Input = ({ word, isCorrect, setIsCorrect }) => {
 
   return (
     <form onSubmit={(e) => checkGuess(e)}>
-        <input className={isCorrect === false ? styles.inputShake : styles.input} type="text" value={guess} onChange={(e) => setGuess(e.target.value)}></input>
+        <input className={isCorrect === false ? styles.inputShake : styles.input} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}></input>
         <div>{message}</div>
     </form>
   );

@@ -40,7 +40,6 @@ export function isAnagram(word, guess) {
 
 // Returns a promise
 export function isWord(guess) {
-  console.log('ran')
   const options = {
     method: 'GET',
     url: process.env.NEXT_PUBLIC_API_URL + guess,
