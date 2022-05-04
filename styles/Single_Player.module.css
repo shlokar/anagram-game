@@ -20,8 +20,15 @@
 
 .score {
   grid-area: score;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 10px;
 }
 
 .timer {
   grid-area: timer;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
 }
