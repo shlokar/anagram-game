@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styles from '../styles/Input.module.css';
 import { isAnagram, isWord } from './Helpers.js';
+import Box from '@mui/material/Box';
+import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
+// import TextField from '@mui/material/TextField';
 
 const Input = ({ word, isCorrect, setIsCorrect }) => {
 
@@ -29,8 +32,23 @@ const Input = ({ word, isCorrect, setIsCorrect }) => {
 
   return (
     <form onSubmit={(e) => checkGuess(e)}>
-        <input className={isCorrect === false ? styles.inputShake : styles.input} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}></input>
-        <div>{message}</div>
+      <div>{message}</div>
+      {/* <TextField id="standard-basic" label="Standard" variant="standard" color="secondary"/> */}
+      <div className={styles.inputContainer}>
+        <span className={styles.borderLeft}></span>
+        <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
+        </input>
+        <span className={styles.iconContainer}>
+          <KeyboardReturnIcon className={styles.icon}/>
+        </span>
+      </div>
+      {/* <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
+      </input>
+      <div className={iconContainer}>
+        <KeyboardReturnIcon className={styles.icon}/>
+      </div> */}
+      {/* <KeyboardReturnIcon className={styles.icon}/> */}
+      {/* <div>{message}</div> */}
     </form>
   );
 

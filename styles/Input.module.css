@@ -1,11 +1,54 @@
-.input {
-  width: 330px;
-  height: 55px;
+.inputContainer {
+  display: flex;
+  flex-direction: row;
 }
 
-.inputShake {
-  width: 330px;
+.borderLeft {
+  opacity: 0.65;
   height: 55px;
+  width: 55px;
+  border: none;
+  border-bottom: 6px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219));
+}
+
+.input {
+  width: 220px;
+  height: 55px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 1.875em;
+  opacity: 0.65;
+  border: none;
+  border-bottom: 6px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29));
+}
+
+.input:focus {
+  outline: none;
+}
+
+.iconContainer {
+  opacity: 0.65;
+  height: 55px;
+  width: 55px;
+  border: none;
+  border-bottom: 6px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, rgba(225, 48, 108), rgba(253, 29, 29));
+}
+
+.icon {
+  transform: scaleX(-1);
+  fill: url(#gradient);
+  font-size: 55px;
+}
+
+.shake {
   animation: shake 0.9s cubic-bezier(.36, .07, .19, .97) both;
   transform: translate3d(0, 0, 0);
   /* backface-visibility: hidden; */
