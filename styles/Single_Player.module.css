@@ -4,7 +4,32 @@
   display: grid;
   grid-template-rows: 1fr 4fr 1fr;
   grid-template-columns: 25% 50% 25%;
-  grid-template-areas: "score . timer" ". hive ." ". input ."
+  grid-template-areas: "top-left top-middle top-right" ". hive ." ". input ."
+}
+
+.top_left {
+  grid-area: top-left;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.top_middle {
+  grid-area: top-middle;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 10px;
+}
+
+.top_right {
+  grid-area: top-right;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 
 .hive {
@@ -18,17 +43,10 @@
   align-items: flex-end;
 }
 
-.score {
-  grid-area: score;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-bottom: 10px;
+.icon {
+  fill: url(#gradient);
+  font-size: 55px;
+  opacity: 0.8;
+  margin-right: 1px;
 }
 
-.timer {
-  grid-area: timer;
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 10px;
-}
