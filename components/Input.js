@@ -36,13 +36,13 @@ const Input = ({ word, isCorrect, setIsCorrect, timeOver }) => {
       {/* <TextField id="standard-basic" label="Standard" variant="standard" color="secondary"/> */}
       <div className={styles.inputContainer}>
         <span className={styles.borderLeft}></span>
-        {timeOver
+        {/* {timeOver
           ? <input disabled className={styles.input}></input>
           : <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
           </input>
-        }
-        {/* <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
-        </input> */}
+        } */}
+        <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
+        </input>
         <span className={styles.iconContainer}>
           <KeyboardReturnIcon className={styles.icon}/>
         </span>

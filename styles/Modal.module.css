@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  z-index: 3;
+}
+
+.score_icon {
+  fill: url(#gradient);
+  font-size: 150px;
+  opacity: 0.8;
+}
+
+.score {
+  font-size: 110px;
+  opacity: 0.65;
+  font-weight: 500;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  z-index: 2;
+  transform: translateX(-13px);
+}
+
+.button {
+  background-color: transparent;
+  height: 70px;
+  width: 300px;
+  font-size: 30px;
+  font-weight: 900;
+  opacity: 0.65;
+  text-transform: uppercase;
+  border: 8px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29));
+  box-shadow: 4px 6px 6px 1.5px rgba(0, 0, 255, .2);
+}
+
+.button:hover {
+  background-color: rgb(241, 241, 252);
+}

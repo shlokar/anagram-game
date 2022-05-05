@@ -20,7 +20,7 @@ const Timer = ({ expiryTimestamp, setTimeOver }) => {
     minutes,
     start,
     restart
-  } = useTimer({ expiryTimestamp, onExpire: () => setTimeOver(true) })
+  } = useTimer({ expiryTimestamp, onExpire: () => setTimeout(() => setTimeOver(true), 1000) })
 
   return(
     <>

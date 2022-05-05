@@ -1,22 +1,20 @@
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogActions from '@mui/material/DialogActions';
-import Button from '@mui/material/Button';
-// import IconButton from '@material-ui/core/IconButton'
-// import CloseIcon from '@material-ui/icons/Close';
+import styles from '../styles/Modal.module.css';
+import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
+import { motion } from "framer-motion";
 
-const Modal = ({ open }) => {
+const Modal = ({ score }) => {
 
   return (
-
-    <Dialog open={open}>
-      <DialogTitle>Time Over!</DialogTitle>
-      <DialogActions>
-        <Button variant="text">Back to Home</Button>
-        <Button variant="text">Play again</Button>
-      </DialogActions>
-    </Dialog>
-
+    <motion.div className={styles.container} animate={{ opacity: [0, 1.6] }} transition={{ duration: 1.2, times: [0, 1.2] }}>
+      <div className={styles.top}>
+        <EmojiEventsOutlinedIcon className={styles.score_icon}/>
+        <span className={styles.score}>{score}</span>
+      </div>
+      <div className={styles.bottom}>
+        <button className={styles.button}>Play again</button>
+        <button className={styles.button}>Back</button>
+      </div>
+    </motion.div>
   )
 
 }
