@@ -20,7 +20,6 @@ export default function Single_Player() {
   // const [message, setMessage] = useState('');
   const [score, setScore] = useState(0);
   const [timeOver, setTimeOver] = useState(false);
-  const [gameOver, setGameOver] = useState(false);
   const [open, setOpen] = useState(false);
 
   // Get initial word
@@ -45,16 +44,9 @@ export default function Single_Player() {
     setTimeout(() => setIsCorrect(''), 600);
   }, [isCorrect]);
 
-  // Game over
-  // useEffect(() => {
-  //   if (timeOver) {
-  //     setTimeout(() => setGameOver(true), 1000);
-  //   }
-  // }, [timeOver]);
-
   // Initialize time for timer
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 3);
+  time.setSeconds(time.getSeconds() + 60);
 
   return (
     <>
@@ -64,7 +56,7 @@ export default function Single_Player() {
         {timeOver
           ? (
             <div className={styles.hive}>
-                <Hive timeOver={timeOver} gameOver={gameOver} score={score}/>
+                <Hive timeOver={timeOver} score={score}/>
             </div>
           )
           : (
@@ -86,7 +78,7 @@ export default function Single_Player() {
               </div>
 
               <div className={styles.hive}>
-                <Hive anagram={anagram} isCorrect={isCorrect} timeOver={timeOver} gameOver={gameOver} />
+                <Hive anagram={anagram} isCorrect={isCorrect} timeOver={timeOver} />
               </div>
               <div className={styles.input}>
                 <Input word={word} setIsCorrect={setIsCorrect} isCorrect={isCorrect} timeOver={timeOver}/>

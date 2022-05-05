@@ -43,7 +43,7 @@
   border: 8px solid transparent;
   border-image-slice: 1;
   border-image-source: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29));
-  box-shadow: 4px 6px 6px 1.5px rgba(0, 0, 255, .2);
+  box-shadow: 2px 3px 5px 0.75px rgba(0, 0, 255, .2);
 }
 
 .button:hover {

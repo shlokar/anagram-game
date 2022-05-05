@@ -3,7 +3,7 @@ import styles from '../styles/Hive.module.css';
 // import ShuffleRoundedIcon from '@mui/icons-material/ShuffleRounded';
 import { motion } from "framer-motion";
 
-const Hive = ({ anagram, isCorrect, timeOver, gameOver, score }) => {
+const Hive = ({ anagram, isCorrect, timeOver, score }) => {
 
   const outward = {
     0: {y: [null, -140], transition: { duration: 0.5 }},
