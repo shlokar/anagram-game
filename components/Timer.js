@@ -3,7 +3,7 @@ import styles from '../styles/Timer_Score.module.css';
 import { useTimer } from 'react-timer-hook';
 // import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 
-const Timer = ({ expiryTimestamp }) => {
+const Timer = ({ expiryTimestamp, setTimeOver }) => {
 
   // useEffect(() => {
   //   const time = new Date();
@@ -20,7 +20,7 @@ const Timer = ({ expiryTimestamp }) => {
     minutes,
     start,
     restart
-  } = useTimer({ expiryTimestamp, onExpire: () => console.log('timeout!') })
+  } = useTimer({ expiryTimestamp, onExpire: () => setTimeOver(true) })
 
   return(
     <>

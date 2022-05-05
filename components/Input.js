@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 // import TextField from '@mui/material/TextField';
 
-const Input = ({ word, isCorrect, setIsCorrect }) => {
+const Input = ({ word, isCorrect, setIsCorrect, timeOver }) => {
 
   const [guess, setGuess] = useState('');
   const [message, setMessage] = useState('');
@@ -36,8 +36,13 @@ const Input = ({ word, isCorrect, setIsCorrect }) => {
       {/* <TextField id="standard-basic" label="Standard" variant="standard" color="secondary"/> */}
       <div className={styles.inputContainer}>
         <span className={styles.borderLeft}></span>
-        <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
-        </input>
+        {timeOver
+          ? <input disabled className={styles.input}></input>
+          : <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
+          </input>
+        }
+        {/* <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
+        </input> */}
         <span className={styles.iconContainer}>
           <KeyboardReturnIcon className={styles.icon}/>
         </span>

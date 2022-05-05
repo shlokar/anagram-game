@@ -1,7 +1,7 @@
 import styles from '../styles/Hive.module.css';
 import { motion } from "framer-motion";
 
-const Hive = ({ anagram, isCorrect }) => {
+const Hive = ({ anagram, isCorrect, timeOver }) => {
 
   const outward = {
     0: {y: [null, -140], transition: { duration: 0.5 }},
@@ -42,7 +42,7 @@ const Hive = ({ anagram, isCorrect }) => {
 
         {anagram.split('').map((letter, i) => (
           <motion.svg key={i} custom={i} className={styles.cell} viewBox="0 0 120 103.92304845413263"
-            animate={i.toString()} variants={isCorrect ? inward : outward}
+            animate={i.toString()} variants={isCorrect || timeOver ? inward : outward}
           >
             <polygon className={styles.hexagon} points="3,51.96152422706631 30,3 90,3 117,51.96152422706631 90,100.92304845413263 30,100.92304845413263"></polygon>
             <text className={styles.letter} x="50%" y="50%" dy="0.35em">{letter}</text>
