@@ -21,9 +21,24 @@
   padding: 25px;
 }
 
-.center {
+.modalCell {
   position: absolute;
   height: 140px;
+}
+
+.center {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerCell {
+  position: absolute;
+  height: 140px;
+  padding: 25px;
+  position: absolute;
 }
 /*
 .0 {
@@ -71,19 +86,12 @@
   /* text-color: rgba(0, 0, 0, 0.435); */
 }
 
-.questionMark {
-  text-anchor: middle;
-  font-weight: 700;
-  font-size: 1.875em;
-  text-transform: uppercase;
+.shuffleIcon {
   fill: url(#gradient);
-  /* opacity: 0.7;
-  width: 5px;
-  height: 5px; */
-  /* font-size: 55px;
-  opacity: 0.7;
-  margin-right: 1px; */
-  /* fill: black; */
+  font-size: 45px;
+  opacity: 0.8;
+  position: relative;
+  /* transform: translate(-20px, -20px); */
 }
 
 .gradient {

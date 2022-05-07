@@ -47,7 +47,7 @@ export default function Single_Player() {
 
   // Initialize time for timer
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 3);
+  time.setSeconds(time.getSeconds() + 60);
 
   return (
     <>
