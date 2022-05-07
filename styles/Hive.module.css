@@ -20,6 +20,11 @@
   height: 140px;
   padding: 25px;
 }
+
+.center {
+  position: absolute;
+  height: 140px;
+}
 /*
 .0 {
   transform: translate(-75%, -50%);

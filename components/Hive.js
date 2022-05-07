@@ -2,6 +2,7 @@ import Modal from './Modal.js';
 import styles from '../styles/Hive.module.css';
 // import ShuffleRoundedIcon from '@mui/icons-material/ShuffleRounded';
 import { motion } from "framer-motion";
+// import shuffle from '../public/shuffle.svg';
 
 const Hive = ({ anagram, isCorrect, timeOver, score }) => {
 
@@ -38,8 +39,8 @@ const Hive = ({ anagram, isCorrect, timeOver, score }) => {
           </linearGradient>
         </svg>
 
-        <motion.svg className={`${styles.cell} ${styles.center}`} viewBox="0 0 120 103.92304845413263"
-          animate={{ scale: 6, x: -100, y: -100 }} transition={{ duration: 0.7 }}>
+        <motion.svg className={styles.center} viewBox="0 0 120 103.92304845413263"
+          animate={{ scale: 4, x: "-38%", y: "-60%" }} transition={{ duration: 0.7 }}>
           <polygon className={styles.hexagon} points="3,51.96152422706631 30,3 90,3 117,51.96152422706631 90,100.92304845413263 30,100.92304845413263" fill="url(#gradient)"></polygon>
         </motion.svg>
 
@@ -62,8 +63,7 @@ const Hive = ({ anagram, isCorrect, timeOver, score }) => {
             <stop offset="100%" stopColor="#FD1D1D"/>
           </linearGradient>
         </svg>
-
-        <motion.svg className={`${styles.cell} ${styles.center}`} viewBox="0 0 120 103.92304845413263">
+        <motion.svg className={styles.cell} viewBox="0 0 120 103.92304845413263">
           <polygon className={styles.hexagon} points="3,51.96152422706631 30,3 90,3 117,51.96152422706631 90,100.92304845413263 30,100.92304845413263" fill="url(#gradient)"></polygon>
           <text className={styles.questionMark} x="50%" y="50%" dy="0.35em">?</text>
         </motion.svg>
