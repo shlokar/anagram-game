@@ -34,8 +34,8 @@ const Input = ({ word, isCorrect, setIsCorrect, timeOver }) => {
     <form onSubmit={(e) => checkGuess(e)}>
       <div>{message}</div>
       {/* <TextField id="standard-basic" label="Standard" variant="standard" color="secondary"/> */}
-      <div className={styles.inputContainer}>
-        <span className={styles.borderLeft}></span>
+      <div className={styles.input_container}>
+        <span className={`${styles.border_left} ${isCorrect === false ? styles.shake : null}`}></span>
         {/* {timeOver
           ? <input disabled className={styles.input}></input>
           : <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
@@ -43,7 +43,7 @@ const Input = ({ word, isCorrect, setIsCorrect, timeOver }) => {
         } */}
         <input className={`${styles.input} ${isCorrect === false ? styles.shake : null}`} type="text" value={guess} onChange={(e) => setGuess(e.target.value.toLowerCase())}>
         </input>
-        <span className={styles.iconContainer}>
+        <span className={`${styles.icon_container} ${isCorrect === false ? styles.shake : null}`}>
           <KeyboardReturnIcon className={styles.icon}/>
         </span>
       </div>
