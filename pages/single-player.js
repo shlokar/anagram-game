@@ -8,8 +8,8 @@ import Modal from '../components/Modal.js';
 import Header from '../components/Header.js';
 import { getWord, shuffleWord } from '../components/Helpers.js';
 import styles from '../styles/Single_Player.module.css';
-import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
-import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
+// import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
+// import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 // import { motion } from "framer-motion";
 
 
@@ -68,9 +68,18 @@ export default function Single_Player() {
             <>
               <div className={styles.game}>
 
-                {/* <Modal open={open}></Modal> */}
+                <div className={styles.top}>
+                  <div className={styles.score}>
+                    <Score score={score}/>
+                  </div>
+                  <div className={styles.timer}>
+                    <Timer expiryTimestamp={time} setTimeOver={setTimeOver}/>
+                  </div>
+                  {/* <Score score={score}/> */}
+                  {/* <Timer expiryTimestamp={time} setTimeOver={setTimeOver}/> */}
+                </div>
 
-                <div className={styles.top_left}>
+                {/* <div className={styles.top_left}>
                   <EmojiEventsOutlinedIcon className={styles.icon}/>
                 </div>
 
@@ -81,7 +90,7 @@ export default function Single_Player() {
 
                 <div className={styles.top_right}>
                   <Timer expiryTimestamp={time} setTimeOver={setTimeOver}/>
-                </div>
+                </div> */}
 
                 <div className={styles.hive}>
                   <Hive anagram={anagram} isCorrect={isCorrect} timeOver={timeOver} />

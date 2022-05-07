@@ -14,10 +14,40 @@
   display: grid;
   grid-template-rows: 1fr 4fr 1fr;
   grid-template-columns: 25% 50% 25%;
-  grid-template-areas: "top-left top-middle top-right" ". hive ." "input input input"
+  /* grid-template-areas: "top-left top-middle top-right" ". hive ." "input input input" */
+  grid-template-areas: "top top top" ". hive ." "input input input"
 }
 
-.top_left {
+.top {
+  grid-area: top;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20%;
+  padding-right: 20%;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.timer {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+}
+
+.score {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* .score {
+  padding-left: 10%;
+}
+
+.timer {
+
+} */
+/* .top_left {
   grid-area: top-left;
   display: flex;
   justify-content: flex-end;
@@ -39,8 +69,7 @@
   display: flex;
   align-items: flex-end;
   margin-bottom: 10px;
-  /* padding-bottom: 10px; */
-}
+} */
 
 .hive {
   grid-area: hive;
