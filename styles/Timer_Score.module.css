@@ -1,6 +1,13 @@
-.textContainer {
+.timerTextCont {
   width: 100%;
   padding: 10px;
+}
+
+.scoreTextCont {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .text {

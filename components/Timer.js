@@ -25,7 +25,7 @@ const Timer = ({ expiryTimestamp, setTimeOver }) => {
   return(
     <>
       <AccessAlarmIcon className={styles.icon} />
-      <div className={styles.textContainer}>
+      <div className={styles.timerTextCont}>
         <span className={styles.text}>{minutes}:</span>{seconds < 10 ? <span className={styles.text}>0</span> : null}<span className={styles.text}>{seconds}</span>
       </div>
       {/* <span className={styles.text}>{minutes}:</span>{seconds < 10 ? <span className={styles.text}>0</span> : null}<span className={styles.text}>{seconds}</span> */}

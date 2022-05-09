@@ -10,7 +10,7 @@ import { getWord, shuffleWord } from '../components/Helpers.js';
 import styles from '../styles/Single_Player.module.css';
 // import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 // import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 
 export default function Single_Player() {
@@ -50,7 +50,7 @@ export default function Single_Player() {
 
   // Initialize time for timer
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 60);
+  time.setSeconds(time.getSeconds() + 90);
 
   return (
     <>

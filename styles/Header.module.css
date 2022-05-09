@@ -9,7 +9,7 @@
   border-bottom: 1px solid transparent;
   border-image-slice: 1;
   border-image-source: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29));
-  margin-bottom: 4%;
+  /* margin-bottom: 4%; */
   /* vertical-align: center; */
 }
 
@@ -21,6 +21,33 @@
   /* color: rgba(193, 53, 132); */
   /* color: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29)); */
   /* background: -webkit-linear-gradient(right, rgb(54, 83, 225), rgba(253, 29, 29)); */
+  /* background: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent; */
+}
+
+.titleOne {
+  /* background: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108)); */
+  background: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.titleTwo {
+  /* background: linear-gradient(45deg, rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29)); */
+  background: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.titleThree {
+  /* background: linear-gradient(-45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29)); */
   background: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29));
   -webkit-background-clip: text;
   -moz-background-clip: text;

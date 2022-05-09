@@ -7,7 +7,7 @@ const Score = ({ score }) => {
   return (
     <>
       <EmojiEventsOutlinedIcon className={styles.icon} />
-      <div className={styles.textContainer}>
+      <div className={styles.scoreTextCont}>
         <span className={styles.text}>{ score }</span>
       </div>
     </>

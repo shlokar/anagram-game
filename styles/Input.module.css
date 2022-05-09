@@ -1,12 +1,13 @@
 .input_container {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .border_left {
-  opacity: 0.65;
-  height: 55px;
-  width: 65px;
+  opacity: 0.75;
+  height: 60px;
+  width: 70px;
   border: none;
   border-bottom: 6px solid transparent;
   border-image-slice: 1;
@@ -14,14 +15,15 @@
 }
 
 .input {
-  width: 220px;
-  height: 55px;
+  width: 260px;
+  height: 60px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
-  font-size: 1.875em;
-  opacity: 0.65;
+  font-size: 2em;
+  opacity: 0.76;
+  color: rgba(0, 0, 0, 0.8);
   border: none;
   border-bottom: 6px solid transparent;
   border-image-slice: 1;
@@ -33,9 +35,9 @@
 }
 
 .icon_container {
-  opacity: 0.65;
-  height: 55px;
-  width: 65px;
+  opacity: 0.75;
+  height: 60px;
+  width: 70px;
   border: none;
   border-bottom: 6px solid transparent;
   border-image-slice: 1;

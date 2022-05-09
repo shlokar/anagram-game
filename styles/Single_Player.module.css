@@ -1,16 +1,18 @@
 .container {
   /* width: 100%;
   height: 100%; */
-  height: 83%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+  /* background-color: rgba(248, 248, 255, 1); */
+  padding-top: 5%;
 }
 
 .game {
   width: 800px;
-  height: 600px;
+  height: 610px;
   display: grid;
   grid-template-rows: 1fr 4fr 1fr;
   grid-template-columns: 25% 50% 25%;
@@ -21,7 +23,7 @@
 .top {
   grid-area: top;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   padding-left: 20%;
   padding-right: 20%;
   justify-content: space-between;
@@ -37,7 +39,7 @@
 .score {
   width: 25%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 /* .score {
