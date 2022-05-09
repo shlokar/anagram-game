@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Modal from './Modal.js';
 import styles from '../styles/Hive.module.css';
@@ -6,7 +7,9 @@ import { motion } from "framer-motion";
 // import shuffle from '../public/shuffle.svg';
 import { BiShuffle } from 'react-icons/bi';
 
-const Hive = ({ anagram, isCorrect, timeOver, score }) => {
+const Hive = ({ anagram, isCorrect, timeOver, score, handleShuffle }) => {
+
+  const [isShuffled, setIsShuffled] = useState(false);
 
   const outward = {
     0: {y: [null, -140], transition: { duration: 0.5 }},
@@ -65,12 +68,16 @@ const Hive = ({ anagram, isCorrect, timeOver, score }) => {
             <stop offset="100%" stopColor="#FD1D1D"/>
           </linearGradient>
         </svg>
-        <div className={styles.center}>
+        <div className={styles.center} onClick={() => {
+          handleShuffle();
+          setIsShuffled(true);
+          setTimeout(() => setIsShuffled(false), 600);
+        }}>
           <motion.svg className={styles.centerCell} viewBox="0 0 120 103.92304845413263">
-            <polygon className={styles.hexagon} points="3,51.96152422706631 30,3 90,3 117,51.96152422706631 90,100.92304845413263 30,100.92304845413263" fill="url(#gradient)"></polygon>
+            <polygon className={styles.centerHexagon} points="3,51.96152422706631 30,3 90,3 117,51.96152422706631 90,100.92304845413263 30,100.92304845413263" fill="url(#gradient)"></polygon>
             {/* <text className={styles.questionMark} x="50%" y="50%" dy="0.35em">?</text> */}
           </motion.svg>
-          <BiShuffle className={styles.shuffleIcon}/>
+          <BiShuffle className={styles.shuffleIcon} />
         </div>
         {/* <motion.svg className={styles.cell} viewBox="0 0 120 103.92304845413263">
           <polygon className={styles.hexagon} points="3,51.96152422706631 30,3 90,3 117,51.96152422706631 90,100.92304845413263 30,100.92304845413263" fill="url(#gradient)"></polygon>
@@ -79,7 +86,7 @@ const Hive = ({ anagram, isCorrect, timeOver, score }) => {
         </motion.svg> */}
         {anagram.split('').map((letter, i) => (
           <motion.svg key={i} custom={i} className={styles.cell} viewBox="0 0 120 103.92304845413263"
-            animate={i.toString()} variants={isCorrect ? inward : outward}>
+            animate={i.toString()} variants={isCorrect || isShuffled ? inward : outward}>
             <polygon className={styles.hexagon} points="3,51.96152422706631 30,3 90,3 117,51.96152422706631 90,100.92304845413263 30,100.92304845413263"></polygon>
             <text className={styles.letter} x="50%" y="50%" dy="0.35em">{letter}</text>
           </motion.svg>))}

@@ -32,6 +32,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.7;
+}
+
+.center:hover {
+  opacity: 1;
 }
 
 .centerCell {
@@ -77,6 +82,20 @@
   stroke-opacity: 0.7;
 }
 
+.centerHexagon {
+  fill: rgba(248, 248, 255, 1);
+  stroke: url(#gradient);
+  stroke-width: 6;
+  stroke-opacity: 0.7;
+}
+
+/* .centerHexagon:hover {
+  fill: white;
+  stroke: url(#gradient);
+  stroke-width: 6;
+  stroke-opacity: 0.7;
+} */
+
 .letter {
   text-anchor: middle;
   font-weight: 700;
@@ -89,10 +108,15 @@
 .shuffleIcon {
   fill: url(#gradient);
   font-size: 45px;
+  /* opacity: 0.5; */
   opacity: 0.8;
   position: relative;
   /* transform: translate(-20px, -20px); */
 }
+/*
+.shuffleIcon:hover {
+  opacity: 0.8;
+} */
 
 .gradient {
   height: 0px;

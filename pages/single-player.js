@@ -29,8 +29,6 @@ export default function Single_Player() {
       setWord(res.data.word);
       setAnagram(shuffleWord(res.data.word));
     })
-    // const time = new Date();
-    // time.setSeconds(time.getSeconds() + 600);
   }, []);
 
   // Correct guess
@@ -44,6 +42,11 @@ export default function Single_Player() {
     }
     setTimeout(() => setIsCorrect(''), 600);
   }, [isCorrect]);
+
+  const handleShuffle = () => {
+    console.log(true)
+    setAnagram(shuffleWord(word));
+  }
 
   // Initialize time for timer
   const time = new Date();
@@ -93,7 +96,7 @@ export default function Single_Player() {
                 </div> */}
 
                 <div className={styles.hive}>
-                  <Hive anagram={anagram} isCorrect={isCorrect} timeOver={timeOver} />
+                  <Hive anagram={anagram} isCorrect={isCorrect} timeOver={timeOver} handleShuffle={handleShuffle} />
                 </div>
                 <div className={styles.input}>
                   <Input word={word} setIsCorrect={setIsCorrect} isCorrect={isCorrect} timeOver={timeOver}/>
