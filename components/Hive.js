@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 // import shuffle from '../public/shuffle.svg';
 import { BiShuffle } from 'react-icons/bi';
 
-const Hive = ({ anagram, isCorrect, timeOver, score, handleShuffle }) => {
+const Hive = ({ word, anagram, isCorrect, timeOver, score, handleShuffle }) => {
 
   const [isShuffled, setIsShuffled] = useState(false);
 
@@ -49,7 +49,7 @@ const Hive = ({ anagram, isCorrect, timeOver, score, handleShuffle }) => {
           <polygon className={styles.hexagon} points="3,51.96152422706631 30,3 90,3 117,51.96152422706631 90,100.92304845413263 30,100.92304845413263" fill="url(#gradient)"></polygon>
         </motion.svg>
 
-        <Modal score={score} />
+        <Modal score={score} word={word} />
 
       </div>
     )

@@ -50,7 +50,7 @@ export default function Single_Player() {
 
   // Initialize time for timer
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 90);
+  time.setSeconds(time.getSeconds() + 3);
 
   return (
     <>
@@ -64,7 +64,7 @@ export default function Single_Player() {
         {timeOver
           ? (
             <div className={styles.hive}>
-              <Hive timeOver={timeOver} score={score}/>
+              <Hive timeOver={timeOver} score={score} word={word} />
             </div>
           )
           : (
