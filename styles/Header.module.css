@@ -1,8 +1,10 @@
 .header {
   height: 10%;
   /* height: 80px; */
-  opacity: 0.8;
+  /* opacity: 0.8; */
   padding: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
   /* font-size: 3rem;
   text-align: center; */
   /* background-color: white; */
@@ -11,13 +13,17 @@
   border-image-source: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29));
   /* margin-bottom: 4%; */
   /* vertical-align: center; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .title {
   font-size: 2.8rem;
-  text-align: center;
+  /* text-align: center; */
   margin: 0px;
   letter-spacing: 0.1rem;
+  opacity: 0.8;
   /* color: rgba(193, 53, 132); */
   /* color: linear-gradient(45deg, rgba(64, 93, 230), rgba(88, 81, 219), rgba(131, 58, 180), rgba(193, 53, 132), rgba(225, 48, 108), rgba(253, 29, 29)); */
   /* background: -webkit-linear-gradient(right, rgb(54, 83, 225), rgba(253, 29, 29)); */
@@ -53,4 +59,20 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+.icon {
+  font-size: 40px;
+  fill: url(#gradient);
+  opacity: 0.8;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
 }
