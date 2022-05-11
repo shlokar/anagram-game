@@ -21,8 +21,8 @@ const Hive = ({ word, anagram, isCorrect, timeOver, score, handleShuffle }) => {
   }
 
   const inward = {
-    0: i => ({x: [null, 0], y: [null, 0], transition: { duration: 0.8, times: [0, (i + 1) * 0.17] }}),
-    1: i => ({x: [null, 0], y: [null, 0], transition: { duration: 0.8, times: [0, (i + 1) * 0.16] }}),
+    0: i => ({x: [null, 0], y: [null, 0], transition: { duration: 0.8, times: [0, (i + 1) * 0.16] }}),
+    1: i => ({x: [null, 0], y: [null, 0], transition: { duration: 0.8, times: [0, (i + 1) * 0.15] }}),
     2: i => ({x: [null, 0], y: [null, 0], transition: { duration: 0.8, times: [0, (i + 1) * 0.15] }}),
     3: i => ({x: [null, 0], y: [null, 0], transition: { duration: 0.8, times: [0, (i + 1) * 0.14] }}),
     4: i => ({x: [null, 0], y: [null, 0], transition: { duration: 0.8, times: [0, (i + 1) * 0.13] }}),
