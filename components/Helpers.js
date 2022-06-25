@@ -48,5 +48,5 @@ export function isWord(guess) {
       'X-RapidAPI-Key': process.env.NEXT_PUBLIC_API_KEY
     }
   };
-  return axios.request(options);
+  return axios.request(options); 
 }
