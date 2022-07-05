@@ -1,6 +1,10 @@
 const express = require('express')
 const next = require('next')
-const io = require('socket.io')(8080)
+const io = require('socket.io')(8080, {
+  cors: {
+    origin: ['http://localhost:3000']
+  },
+})
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
@@ -21,6 +25,12 @@ app.prepare().then(() => {
 
 io.on('connection', socket => {
   console.log(socket.id);
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
+  socket.on("chat", (message) => {
+    io.emit("chat", message)
+  })
 })
 
 
