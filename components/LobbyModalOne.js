@@ -1,7 +1,7 @@
 import styles from '../styles/LobbyModal.module.css';
 import { motion } from "framer-motion";
 
-const LobbyModal = () => {
+const LobbyModalOne = () => {
 
   return (
     <div className={styles.main}>
@@ -11,7 +11,7 @@ const LobbyModal = () => {
       </motion.svg>
       <motion.div className={styles.buttons}
         initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
-        <button className={styles.button}>Create new game</button>
+        <button className={styles.button}>Start new game</button>
         <span className={styles.or}>or</span>
         <button className={styles.button}>Join by game link</button>
       </motion.div>
@@ -19,4 +19,4 @@ const LobbyModal = () => {
   )
 }
 
-export default LobbyModal;
+export default LobbyModalOne;
