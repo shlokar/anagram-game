@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header.js';
 import LobbyModalOne from '../components/LobbyModalOne.js';
 import LobbyModalTwo from '../components/LobbyModalTwo.js';
+import LobbyModalThree from '../components/LobbyModalThree.js';
 import styles from '../styles/Multi_Player.module.css';
 // import { motion } from "framer-motion";
 
@@ -9,12 +10,14 @@ export default function Multi_Player_Lobby() {
 
   const [modalView, setModalView] = useState('one');
   const [username, setUsername] = useState('');
+  const [gameCode, setGameCode] = useState('');
 
   return (
     <div className={styles.container}>
       <Header />
       {/* <LobbyModalOne/> */}
-      <LobbyModalTwo username={username} setUsername={setUsername}/>
+      {/* <LobbyModalTwo username={username} setUsername={setUsername}/> */}
+      <LobbyModalThree username={username} setUsername={setUsername} gameCode={gameCode} setGameCode={setGameCode}/>
       <svg className={styles.gradient}>
         <linearGradient id="gradient" x2="1" y2="1">
           <stop offset="0%" stopColor="#405DE6"/>
